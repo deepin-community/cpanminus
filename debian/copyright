@@ -1,22 +1,108 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: template-repository
-Source: https://github.com/deepin-community/template-repository
+Upstream-Name: App-cpanminus
+Upstream-Contact: Tatsuhiko Miyagawa <miyagawa@bulknews.net>
+Source: https://metacpan.org/release/App-cpanminus
 
 Files: *
-Copyright: 2023 Tsic404 <liuheng@deepin.org>
-License: GPL-2+
- This package is free software; you can redistribute it and/or modify
+Copyright: 2010-2022, Tatsuhiko Miyagawa <miyagawa@bulknews.net>
+License: Artistic or GPL-1+
+
+Files: fatlib/CPAN/DistnameInfo.pm
+Copyright: 2003 Graham Barr
+License: Artistic or GPL-1+
+
+Files: fatlib/CPAN/Meta.pm fatlib/CPAN/Meta/*
+Copyright: 2010, David Golden and Ricardo Signes
+License: Artistic or GPL-1+
+
+Files: fatlib/CPAN/Meta/Check.pm
+Copyright: 2012, Leon Timmermans
+License: Artistic or GPL-1+
+
+Files: fatlib/CPAN/Meta/YAML.pm
+Copyright: 2010, Adam Kennedy
+License: Artistic or GPL-1+
+
+Files: fatlib/File/pushd.pm
+Copyright: 2014, David A Golden
+License: Artistic or GPL-1+
+
+Files: fatlib/HTTP/Tiny.pm
+Copyright: 2015, Christian Hansen
+License: Artistic or GPL-1+
+
+Files: fatlib/JSON/PP.pm
+Copyright: 2007-2014, Makamaka Hannyaharamitu
+License: Artistic or GPL-1+
+
+Files: fatlib/Module/Metadata.pm
+Copyright: 2001-2011, Ken Williams
+ 2010-2011, Matt S Trout
+ 2010-2011, David Golden
+License: Artistic or GPL-1+
+
+Files: fatlib/Parse/CPAN/Meta.pm
+Copyright: 2014, Adam Kennedy
+License: Artistic or GPL-1+
+
+Files: fatlib/Parse/PMFile.pm
+Copyright: 1995-2013, Andreas Koenig
+ 2013, Kenichi Ishigaki
+License: Artistic or GPL-1+
+
+Files: fatlib/String/ShellQuote.pm
+Copyright: 1997, Roderick Schertler
+License: Artistic or GPL-1+
+
+Files: fatlib/lib/core/only.pm
+Copyright: 2010, Matt S Trout
+License: Artistic or GPL-1+
+
+Files: fatlib/local/lib.pm
+Copyright: 2007-2013, Matt S Trout
+License: Artistic or GPL-1+
+
+Files: fatlib/parent.pm
+Copyright: 2007-2010, Max Maischein
+License: Artistic or GPL-1+
+
+Files: fatlib/version.pm
+Copyright: 2004-2010, John Peacock
+License: Artistic or GPL-1+
+
+Files: testdist/HelloWorld-0.01/ppport.h
+Copyright: Copyright (C) 1999, Kenneth Albanowski.
+ Version 2.x, Copyright (C) 2001, Paul Marquess.
+ Version 3.x, Copyright (c) 2004-2009, Marcus Holland-Moritz.
+License: Artistic or GPL-1+
+
+Files: testdist/MI-EUMM/inc/Module/*
+Copyright: 2002-2012, Adam Kennedy <adamk@cpan.org>
+ 2002-2012, Audrey Tang <autrijus@autrijus.org>
+ 2002-2012, Brian Ingerson <ingy@cpan.org>
+License: Artistic or GPL-1+
+
+Files: testdist/Spreadsheet-Read-*
+Copyright: 2005-2013, H.Merijn Brand
+License: Artistic or GPL-1+
+
+Files: debian/*
+Copyright: 2011, Alessandro Ghedini <ghedo@debian.org>
+ 2012-2024, gregor herrmann <gregoa@debian.org>
+License: Artistic or GPL-1+
+
+License: Artistic
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the Artistic License, which comes with Perl.
+ .
+ On Debian systems, the complete text of the Artistic License
+ can be found in `/usr/share/common-licenses/Artistic'.
+
+License: GPL-1+
+ This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
+ the Free Software Foundation; either version 1, or (at your option)
+ any later version.
  .
- This package is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
- .
- You should have received a copy of the GNU General Public License
- along with this program. If not, see <https://www.gnu.org/licenses/>
- .
- On Debian systems, the complete text of the GNU General
- Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+ On Debian systems, the complete text of version 1 of the
+ General Public License can be found in `/usr/share/common-licenses/GPL-1'.

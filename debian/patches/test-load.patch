@@ -1,0 +1,16 @@
+Description: add a test to load modules
+Origin: vendor
+Forwarded: not-needed
+Author: gregor herrmann <gregoa@debian.org>
+Last-Update: 2020-07-04
+
+--- /dev/null
++++ b/t/load.t
+@@ -0,0 +1,7 @@
++#!/usr/bin/perl
++
++use Test::More;
++
++my @modules = ( 'App::cpanminus', 'App::cpanminus', 'App::cpanminus::script', 'App::cpanminus::Dependency' );
++plan tests => scalar @modules;
++use_ok($_) foreach @modules;

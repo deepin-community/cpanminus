@@ -1,0 +1,21 @@
+Description: add a test to run cpanm(1) during build and autopkgtest
+Origin: vendor
+Forwarded: not-needed
+Author: gregor herrmann <gregoa@debian.org>
+Last-Update: 2017-12-09
+
+--- /dev/null
++++ b/t/run.t
+@@ -0,0 +1,12 @@
++#!/usr/bin/perl
++
++use Test::More tests => 1;
++
++my $command;
++if ($ENV{AUTOPKGTEST_TMP}) {
++    $command = 'cpanm --version';
++} else {
++    $command = "$^X -I blib/lib blib/script/cpanm --version";
++}
++my $result = system($command);
++ok($result == 0, 'cpanm --version returned success');

@@ -1,0 +1,4 @@
+cpanm
+bin/cpanm
+fatpacked/App/cpanminus/fatscript.pm
+lib/App/cpanminus/fatscript.pm
