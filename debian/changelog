@@ -1,5 +1,519 @@
-template-repository (1.0-1) unstable; urgency=medium
+cpanminus (1.7048-1) unstable; urgency=medium
 
-  * Initial release
+  * Import upstream version 1.7048.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.7.0.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- gregor herrmann <gregoa@debian.org>  Sat, 16 Nov 2024 00:08:29 +0100
+
+cpanminus (1.7047-1) unstable; urgency=medium
+
+  * Import upstream version 1.7047.
+  * Declare compliance with Debian Policy 4.6.2.
+  * Update years of packaging copyright.
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 14 Aug 2023 13:56:14 +0200
+
+cpanminus (1.7046-1) unstable; urgency=medium
+
+  * Import upstream version 1.7046.
+  * Declare compliance with Debian Policy 4.6.1.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 13 May 2022 00:18:12 +0200
+
+cpanminus (1.7045-1) unstable; urgency=medium
+
+  * Import upstream version 1.7045.
+    [CVE-2020-16154] remove the functionality to verify CHECKSUMS signature
+  * Update years of upstream and packaging copyright.
+  * Declare compliance with Debian Policy 4.6.0.
+  * Drop unneeded version constraints from (build) dependencies.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 29 Jan 2022 21:20:26 +0100
+
+cpanminus (1.7044-2) unstable; urgency=medium
+
+  * Drop manual installation of App::cpanminus::fatscript which was used
+    by carton until 1.0.28.
+    Add a versioned Breaks on older carton versions.
+  * Update debian/patches/test-load.patch.
+    Remove App::cpanminus::fatscript from list of modules to be loaded, as we
+    don't install it anymore.
+  * debian/*: replace ADTTMP with AUTOPKGTEST_TMP.
+  * debian/watch: use uscan version 4.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.5.0.
+  * Set Rules-Requires-Root: no.
+  * Drop unneeded version constraints from (build) dependencies.
+  * Annotate test-only build dependencies with <!nocheck>.
+  * Bump debhelper-compat to 13.
+  * Set upstream metadata fields: Bug-Submit.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata.
+  * debian/rules: drop manual handling of $HOME.
+    Done automatically by debhelper 13.
+  * Add make to Recommends, and gcc to Suggests.
+    Many CPAN distributions need make (for ExtUtils::MakeMaker), and the C/XS
+    modules also need a C compiler. (Closes: #963953)
+  * Add an empty debian/tests/pkg-perl/syntax-skip to syntax-check all modules
+    in autopkgtests.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 04 Jul 2020 20:26:26 +0200
+
+cpanminus (1.7044-1) unstable; urgency=medium
+
+  [ Damyan Ivanov ]
+  * declare conformance with Policy 4.1.3 (no changes needed)
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ gregor herrmann ]
+  * Import upstream version 1.7044.
+  * debian/upstream/metadata: fix Contact field.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 4.1.4.
+  * Bump debhelper compatibility level to 10.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 05 May 2018 18:32:25 +0200
+
+cpanminus (1.7043-1) unstable; urgency=medium
+
+  [ gregor herrmann ]
+  * Add a patch to add a test which tries to load all modules.
+
+  [ Alex Muntada ]
+  * Remove inactive pkg-perl members from Uploaders.
+
+  [ gregor herrmann ]
+  * debian/watch: download tarball from Github but keep searching for
+    latest stable release version on MetaCPAN, as Github also has devel
+    releases with higher version numbers.
+  * Add debian/gbp.conf to ignore .gitignore on import.
+
+  * Import upstream version 1.7043.
+  * Update debian/copyright.
+    The tarball from Github contains some third-party files.
+  * Update build machinery to new tarball source and avoid any fatpacking.
+    - run (patched) maint/build.pl in debian/rules instead of removing
+      fatpacked modules after the fact
+    - update build dependencies
+    - remove generated files via debian/clean
+    - update debian/patches/test-load.patch (new modules)
+    (Closes: #851506)
+  * Replace ad-hoc test in debian/rules with a (patch that creates a) test
+    script which runs both during build and autopkgtest.
+  * Add /me to Uploaders.
+  * Declare compliance with Debian Policy 4.1.2.
+
+  [ Damyan Ivanov ]
+  * extend the note in d/watch explaining why github is used as a source
+    of original tarballs in the first place
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 10 Dec 2017 23:15:52 +0100
+
+cpanminus (1.7042-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ gregor herrmann ]
+  * Update alternative dependencies. Thanks to lintian.
+
+ -- Dominic Hargreaves <dom@earth.li>  Mon, 21 Nov 2016 18:30:26 +0000
+
+cpanminus (1.7042-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+
+  [ Nick Morrott ]
+  * Import upstream version 1.7042.
+  * Crystalise perl version for dual life dep on libversion-perl
+  * Bump Standards-Version to 3.9.8 (no changes)
+
+ -- Nick Morrott <knowledgejunkie@gmail.com>  Mon, 01 Aug 2016 21:10:01 +0100
+
+cpanminus (1.7040-1) unstable; urgency=medium
+
+  * Team upload.
+  * Import upstream version 1.7040.
+  * Drop spelling.patch, merged upstream.
+  * Update years of upstream copyright.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 22 Jan 2016 21:25:29 +0100
+
+cpanminus (1.7039-1) unstable; urgency=medium
+
+  * Team upload.
+  * Import upstream version 1.7039.
+  * Update versioned runtime dependencies.
+  * Update years of upstream copyright.
+  * Drop lintian override (versioned-dependency-satisfied-by-perl).
+  * Bump debhelper compatibility level to 9.
+  * Add a patch to fix spelling mistakes in the POD.
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 04 Jan 2016 19:29:52 +0100
+
+cpanminus (1.7014-1) unstable; urgency=medium
+
+  * Team upload.
+  * Imported upstream version 1.7014
+  * Update Depends.
+  * Add lintian-override for versioned-dependency-satisfied-by-perl.
+    version.pm going from 0.9908 to 0.9909 and back to 0.9908 looks fishy
+    in Module::CoreList.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 11 Oct 2014 16:18:41 +0200
+
+cpanminus (1.7012-1) unstable; urgency=medium
+
+  * Team upload.
+  * Add debian/upstream/metadata
+  * Imported upstream version 1.7012
+  * Update versioned runtime dependencies.
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 02 Oct 2014 17:43:27 +0200
+
+cpanminus (1.7011-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Axel Beckert ]
+  * Import new upstream release
+
+  [ gregor herrmann ]
+  * Update list of fat-packed modules in debian/rules and debian/control.
+  * Mark package as autopkgtest-able.
+  * Declare compliance with Debian Policy 3.9.6.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 01 Oct 2014 19:50:35 +0200
+
+cpanminus (1.7004-3) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ gregor herrmann ]
+  * debian/control: update {versioned,alternative} (build) dependencies.
+  * Set HOME for additional test as well in debian/rules.
+    (Closes: #759942)
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 30 Aug 2014 15:19:39 -0700
+
+cpanminus (1.7004-2) unstable; urgency=medium
+
+  * Team upload.
+  * Set HOME to a writable directory for tests.
+    Thanks to David Suárez for the bug report. (Closes: #750341)
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 02 Jun 2014 23:12:15 +0200
+
+cpanminus (1.7004-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+    Fixes "--uninstall mentioned twice on man page"
+    (Closes: #741302)
+  * Strip trailing slash from metacpan URLs.
+  * Update dependencies.
+  * debian/rules: add new modules to fatpack removal.
+  * debian/rules: move editing of cpanm script to build target.
+  * debian/rules: run modified cpanm script during tests.
+    Add necessary build dependencies.
+  * Declare compliance with Debian Policy 3.9.5.
+
+ -- gregor herrmann <gregoa@debian.org>  Tue, 13 May 2014 19:49:51 +0200
+
+cpanminus (1.7001-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+  * Update runtime dependencies.
+
+ -- gregor herrmann <gregoa@debian.org>  Tue, 17 Sep 2013 19:18:45 +0200
+
+cpanminus (1.7000-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Sat, 07 Sep 2013 16:00:45 +0200
+
+cpanminus (1.6942-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Wed, 28 Aug 2013 13:38:34 +0200
+
+cpanminus (1.6940-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+  * Update versioned runtime dependencies.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 09 Aug 2013 19:38:04 +0200
+
+cpanminus (1.6936-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 05 Aug 2013 13:07:50 +0200
+
+cpanminus (1.6934-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Sun, 28 Jul 2013 12:42:42 +0200
+
+cpanminus (1.6933-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+  * Bump versioned dependency on libmodule-cpanfile-perl.
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 25 Jul 2013 20:20:40 +0200
+
+cpanminus (1.6927-1) unstable; urgency=low
+
+  * Team upload.
+
+  [ Oleg Gashev ]
+  * New upstream release.
+
+  [ gregor herrmann ]
+  * "Fatpacked" modules: remove new ones (debian/rules), update
+    dependencies (debian/control).
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 24 Jul 2013 20:56:22 +0200
+
+cpanminus (1.6907-1) unstable; urgency=low
+
+  * New upstream release
+  * Depends on libaliased-perl and libstring-shellquote-perl and update
+    fatpacked modules list
+  * Do not suggest pmuninstall anymore since cpanm has now an experimental
+    --uninstall option
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Fri, 26 Apr 2013 22:46:10 +0200
+
+cpanminus (1.6108-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Wed, 17 Apr 2013 14:21:16 +0200
+
+cpanminus (1.6107-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Sun, 07 Apr 2013 14:47:41 +0200
+
+cpanminus (1.6102-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Thu, 28 Mar 2013 18:56:13 +0100
+
+cpanminus (1.6101-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Tue, 26 Mar 2013 17:32:25 +0100
+
+cpanminus (1.6008-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 23 Mar 2013 13:40:24 +0100
+
+cpanminus (1.6006-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Thu, 14 Mar 2013 15:31:05 +0100
+
+cpanminus (1.6005-1) unstable; urgency=low
+
+  * New upstream release
+  * Update fat packed modules list and Depends
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Wed, 13 Mar 2013 11:55:40 +0100
+
+cpanminus (1.6002-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+  * Update upstream copyright information.
+  * Refresh fat-packed modules: update removal list in debian/rules,
+    adjust dependencies in debian/control.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 02 Mar 2013 23:48:01 +0100
+
+cpanminus (1.5021-1) unstable; urgency=low
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ Alessandro Ghedini ]
+  * New upstream release
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Tue, 12 Feb 2013 12:57:25 +0100
+
+cpanminus (1.5018-1) unstable; urgency=low
+
+  * New upstream release
+  * Partially restore "mangled" Depends
+  * Suggest the pmuninstall package (Closes: #681024)
+  * Bump Standards-Version to 3.9.4 (no changes needed)
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Sun, 30 Sep 2012 20:47:10 +0200
+
+cpanminus (1.5017-1) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * debian/control: update {versioned,alternative} (build) dependencies.
+
+  [ Alessandro Ghedini ]
+  * New upstream release
+  * Remove Module::CPANfile in d/rules too
+  * Suggest libmodule-cpanfile-perl
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Thu, 26 Jul 2012 01:02:36 +0200
+
+cpanminus (1.5015-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Tue, 26 Jun 2012 17:54:01 +0200
+
+cpanminus (1.5014-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Wed, 13 Jun 2012 19:08:14 +0200
+
+cpanminus (1.5013-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 12 May 2012 19:53:20 +0200
+
+cpanminus (1.5012-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Fri, 11 May 2012 17:20:49 +0200
+
+cpanminus (1.5011-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Thu, 12 Apr 2012 21:50:43 +0200
+
+cpanminus (1.5010-1) unstable; urgency=low
+
+  * New upstream release
+  * Email change: Alessandro Ghedini -> ghedo@debian.org
+
+ -- Alessandro Ghedini <ghedo@debian.org>  Sun, 01 Apr 2012 14:56:18 +0200
+
+cpanminus (1.5008-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+  * debian/copyright: update to Copyright-Format 1.0.
+  * Bump Standards-Version to 3.9.3 (no changes).
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 18 Mar 2012 18:03:19 +0100
+
+cpanminus (1.5007-2) unstable; urgency=low
+
+  * Remove not used Depends (Closes: #654193)
+    - libversion-requirements-perl
+    - libparent-perl
+    - libcpan-meta-perl
+    - libcpan-meta-yaml-perl
+
+ -- Alessandro Ghedini <al3xbio@gmail.com>  Fri, 06 Jan 2012 23:12:10 +0100
+
+cpanminus (1.5007-1) unstable; urgency=low
+
+  * New upstream release
+    - Documentation added for --skip-installed option (Closes: #649834)
+
+ -- Alessandro Ghedini <al3xbio@gmail.com>  Wed, 21 Dec 2011 20:22:37 +0100
+
+cpanminus (1.5006-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alessandro Ghedini <al3xbio@gmail.com>  Wed, 30 Nov 2011 18:08:29 +0100
+
+cpanminus (1.5004-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alessandro Ghedini <al3xbio@gmail.com>  Wed, 09 Nov 2011 19:12:09 +0100
+
+cpanminus (1.5003-1) unstable; urgency=low
+
+  * New upstream release
+  * Remove bundled modules from cpanm script
+    - Remove fatpacked modules from bin/cpanm at build time (gregoa++)
+    - Update Depends with removed fatpacked modules
+    - Update long description (it is no more 'dependency free')
+    - Depends on curl | wget | libhttp-tiny-perl
+  * Update upstream copyright for bundled modules
+
+ -- Alessandro Ghedini <al3xbio@gmail.com>  Wed, 19 Oct 2011 10:38:46 +0200
+
+cpanminus (1.4008-2) unstable; urgency=low
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Alessandro Ghedini ]
+  * Improve long description (Closes: #641086)
+
+ -- Alessandro Ghedini <al3xbio@gmail.com>  Sat, 10 Sep 2011 18:41:20 +0200
+
+cpanminus (1.4008-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alessandro Ghedini <al3xbio@gmail.com>  Thu, 16 Jun 2011 16:05:44 +0200
+
+cpanminus (1.4006-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alessandro Ghedini <al3xbio@gmail.com>  Mon, 16 May 2011 22:08:54 +0200
+
+cpanminus (1.4005-1) unstable; urgency=low
+
+  * New upstream release
+  * Bump Standards-Version to 3.9.2 (no changes needed)
+
+ -- Alessandro Ghedini <al3xbio@gmail.com>  Thu, 12 May 2011 16:14:46 +0200
+
+cpanminus (1.4004-1) unstable; urgency=low
+
+  * New upstream release
+  * Remove Suggests for liblocal-lib-perl (it is bundled in the distribution)
+
+ -- Alessandro Ghedini <al3xbio@gmail.com>  Sun, 03 Apr 2011 18:33:24 +0200
+
+cpanminus (1.3001-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #579147)
+
+ -- Alessandro Ghedini <al3xbio@gmail.com>  Sat, 05 Mar 2011 11:42:05 +0100

@@ -2,3 +2,7 @@
 
 %:
 	dh $@
+
+override_dh_auto_configure:
+	perl $(CURDIR)/maint/build.pl
+	dh_auto_configure

@@ -1,0 +1,19 @@
+Description: don't fatpack anything
+Origin: vendor
+Forwarded: not-needed
+Author: gregor herrmann <gregoa@debian.org>
+Last-Update: 2017-12-09
+
+--- a/maint/build.pl
++++ b/maint/build.pl
+@@ -55,8 +55,8 @@
+     `fatpack file`;
+ };
+ 
+-generate_file('script/cpanm.PL', "cpanm", $fatpack_compact);
+-generate_file('script/cpanm.PL', "fatpacked/App/cpanminus/fatscript.pm", $fatpack, 'package App::cpanminus::fatscript;');
++generate_file('script/cpanm.PL', "cpanm", '');
++generate_file('script/cpanm.PL', "fatpacked/App/cpanminus/fatscript.pm", '', 'package App::cpanminus::fatscript;');
+ chmod 0755, "cpanm";
+ 
+ END {

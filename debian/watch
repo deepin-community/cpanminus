@@ -1,0 +1,11 @@
+version=4
+
+# Search on MetaCPAN for current stable release, download tarball from
+# Github (with a sane name).
+# Rationale: Github also contains beta versions with higher numbers.
+# CPAN versions are fatpacked (whitespace-compression) which makes them not
+# the "original source" (See #851506)
+
+opts="downloadurlmangle=s%.*/App-cpanminus-v?(\d[\d.-]+)\.(?:tar(?:\.gz|\.bz2)?|tgz|zip)$%https://github.com/miyagawa/cpanminus/archive/$1.tar.gz%, \
+      filenamemangle=s%(?:.*?)?v?(\d[\d.-]+)\.tar\.gz%cpanminus-$1.tar.gz%" \
+      https://metacpan.org/release/App-cpanminus   .*/App-cpanminus-v?@ANY_VERSION@@ARCHIVE_EXT@$
